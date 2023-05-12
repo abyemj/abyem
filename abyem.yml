@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: abyem-portfolio
+  description: My personal
+  tags:
+    - javascript
+    - data
+  links:
+    - url: https://abyem.com
+      title: personal site
+      icon: user
+  annotations:
+    abyem.com: 'https://abyem.com/#contact'
+spec:
+  type: website
+  lifecycle: production
+  owner: abyemj
+  system: abyem-portal
+  dependsOn: ['resource:artists-db']
+  apiConsumedBy: ['component:www-artist']
